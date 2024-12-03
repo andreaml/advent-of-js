@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Challenge1 from './challenges/Challenge1'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +17,8 @@ function App() {
           Portfolio of the challenges accomplished during the <a href='https://www.adventofjs.com/'>Advent of Javascript</a>.
           Experimenting with Vite, practicing React and improving my CSS skills.
         </p>
+        <h2>Challenge 1: Show/Hide Password</h2>
+        <Challenge1 />
       </div>
     </>
   )

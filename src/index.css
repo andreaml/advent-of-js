@@ -7,11 +7,12 @@
 
   --main-text-color: black;
   --main-primary-color: #698663;
+  --main-primary-light-color: #c8e2d9;
   --main-secondary-color: #384635;
   --main-accent-color: #df0b10;
   --main-link-color: var(--main-accent-color);
   --main-link-hover-color: #b80f09;
-  --main-bg-color: #c8e2d9;
+  --main-bg-color: var(--main-primary-light-color);
 
   color-scheme: light dark;
   color: var(--main-text-color);
