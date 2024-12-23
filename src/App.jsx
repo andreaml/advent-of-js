@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Challenge1 from './challenges/Challenge1'
+import Challenge2 from './challenges/Challenge2'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         </p>
         <h2>Challenge 1: Show/Hide Password</h2>
         <Challenge1 />
+        <Challenge2 />
       </div>
     </>
   )
