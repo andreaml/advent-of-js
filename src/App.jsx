@@ -20,6 +20,7 @@ function App() {
         </p>
         <h2>Challenge 1: Show/Hide Password</h2>
         <Challenge1 />
+        <h2>Challenge 2: Dropdown input</h2>
         <Challenge2 />
       </div>
     </>

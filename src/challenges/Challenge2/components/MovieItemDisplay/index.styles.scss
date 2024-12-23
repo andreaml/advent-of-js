@@ -1,0 +1,33 @@
+@import '../../../../styles/mixins';
+
+.dropdown__movie-display {
+    align-items: center;
+    color: inherit;
+    column-gap: 25px;
+    display: flex;
+
+    $font-size-heading: 42px;
+    $font-size-subtitle: 32px;
+
+    &__img {
+        height: 148px;
+    }
+
+    &__title {
+        align-items: flex-start;
+        color: var(--main-secondary-color);
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        &-heading {
+            font-size: $font-size-heading;
+            font-weight: 700;
+        }
+
+        &-subtitle {
+            font-size: $font-size-subtitle;
+            font-weight: 400;
+        }
+    }
+}
