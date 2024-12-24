@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Challenge1 from './challenges/Challenge1'
 import Challenge2 from './challenges/Challenge2'
+import Challenge3 from './challenges/Challenge3'
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Challenge1 />
         <h2>Challenge 2: Dropdown input</h2>
         <Challenge2 />
+        <h2>Challenge 3: Dropdown input</h2>
+        <Challenge3 />
       </div>
     </>
   )

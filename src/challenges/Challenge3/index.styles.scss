@@ -1,0 +1,12 @@
+@import '../../styles/mixins';
+
+@include scope('auto-resizing-textarea') {
+    background-color: var(--main-primary-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--main-secondary-color);
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    padding: 20px;
+    width: 100%;
+}
