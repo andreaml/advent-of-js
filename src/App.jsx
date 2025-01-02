@@ -4,6 +4,7 @@ import Challenge1 from './challenges/Challenge1'
 import Challenge2 from './challenges/Challenge2'
 import Challenge3 from './challenges/Challenge3'
 import Challenge4 from './challenges/Challenge4'
+import Challenge5 from './challenges/Challenge5'
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
         <Challenge3 />
         <h2>Challenge 4: Dropdown input</h2>
         <Challenge4 />
+        <h2>Challenge 5: Character counter</h2>
+        <Challenge5 />
       </div>
     </>
   )
