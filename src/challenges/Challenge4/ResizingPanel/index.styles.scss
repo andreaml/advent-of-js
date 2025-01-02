@@ -1,0 +1,49 @@
+@import '../../../styles/mixins';
+
+@include scope('resizing-panel ') {
+    $divider-width: 3px;
+    $divider-color: black;
+
+    border: 1px solid $divider-color;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 50vh;
+    max-width: 100%;
+    width: calc(100vw - 64px);
+
+    .divider-y {
+        background-color: $divider-color;
+        cursor: row-resize;
+        height: $divider-width;
+        width: 100%;
+    }
+
+    .divider-x {
+        background-color: $divider-color;
+        cursor: col-resize;
+        height: 100%;
+        width: $divider-width;
+    }
+
+    &__top {
+        flex: 1;
+        overflow: scroll;
+    }
+
+    &__bottom {
+        align-items: stretch;
+        border: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        height: auto;
+        min-height: 100px;
+    }
+
+    &__left, &__right {
+        overflow: scroll;
+    }
+
+    &__right {
+        flex: 1;
+    }
+}
