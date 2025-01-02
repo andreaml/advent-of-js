@@ -6,7 +6,7 @@
 
     Bonus: Convert this into reusable code. For example, if you’re using React convert this into a custom hook.
 
-    Source: https://store.selfteach.me/view/courses/advent-of-javascript-2024/2875661-challenge-3-resizable-text-area/9312332-challenge-3
+    Source: https://store.selfteach.me/view/courses/advent-of-javascript-2024/2878133-challenge-4-resizable-split-panels/9321095-challenge-4
 */
 
 import React from 'react';
