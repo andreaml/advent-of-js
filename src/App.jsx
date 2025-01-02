@@ -3,6 +3,7 @@ import './App.css'
 import Challenge1 from './challenges/Challenge1'
 import Challenge2 from './challenges/Challenge2'
 import Challenge3 from './challenges/Challenge3'
+import Challenge4 from './challenges/Challenge4'
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Challenge2 />
         <h2>Challenge 3: Dropdown input</h2>
         <Challenge3 />
+        <h2>Challenge 4: Dropdown input</h2>
+        <Challenge4 />
       </div>
     </>
   )
