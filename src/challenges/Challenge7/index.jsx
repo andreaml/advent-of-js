@@ -8,7 +8,7 @@
 */
 
 import React from 'react';
-import SlugifyInput from './SlugifyInput/index copy';
+import SlugifyInput from './SlugifyInput';
 
 const Challenge7 = () => {
     return (
