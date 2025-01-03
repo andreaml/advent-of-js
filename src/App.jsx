@@ -5,6 +5,7 @@ import Challenge2 from './challenges/Challenge2'
 import Challenge3 from './challenges/Challenge3'
 import Challenge4 from './challenges/Challenge4'
 import Challenge5 from './challenges/Challenge5'
+import Challenge6 from './challenges/Challenge6'
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
         <Challenge4 />
         <h2>Challenge 5: Character counter</h2>
         <Challenge5 />
+        <h2>Challenge 6: Copy to clipboard</h2>
+        <Challenge6/>
       </div>
     </>
   )
