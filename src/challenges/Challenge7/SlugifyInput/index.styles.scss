@@ -1,0 +1,45 @@
+@import '../../../styles/mixins';
+
+@include scope('slugify-container') {
+    p {
+        padding: 0 20px;
+        text-align: left;
+    }
+}
+
+@include scope('slugify-input') {
+    align-items: flex-start;
+    background-color: var(--main-primary-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+    padding: 20px;
+    width: 100%;
+
+    .slugify-input__label {
+        color: var(--main-secondary-color);
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .slugify-input__input {
+        background-color: transparent;
+        border: none;
+        color: var(--main-secondary-color);
+        font-size: 20px;
+        height: 100%;
+        width: 100%;
+
+        &:focus,
+        &:active {
+        outline: none;
+        }
+
+        &::placeholder {
+            color: var(--main-secondary-light-color);
+        }
+    }
+}
