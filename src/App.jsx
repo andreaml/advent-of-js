@@ -6,6 +6,7 @@ import Challenge3 from './challenges/Challenge3'
 import Challenge4 from './challenges/Challenge4'
 import Challenge5 from './challenges/Challenge5'
 import Challenge6 from './challenges/Challenge6'
+import Challenge7 from './challenges/Challenge7'
 
 
 function App() {
@@ -34,6 +35,8 @@ function App() {
         <Challenge5 />
         <h2>Challenge 6: Copy to clipboard</h2>
         <Challenge6/>
+        <h2>Challenge 7: Slugify input</h2>
+        <Challenge7/>
       </div>
     </>
   )
