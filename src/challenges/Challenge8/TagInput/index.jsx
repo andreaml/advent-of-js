@@ -4,7 +4,7 @@ import Tag from './Tag';
 import './index.styles.scss';
 
 const TagInput = ({defaultTags}) => {
-    const { tags, tag, onTagChange, onKeyDown, onPaste, deleteTag } = useTags(defaultTags);
+    const { tags, tag, highlightedTags, onTagChange, onKeyDown, onPaste, deleteTag } = useTags(defaultTags);
     const randomId = Math.random().toString(36).substring(7);
     const tagInputId = `tagInput-${randomId}`;
 
@@ -18,6 +18,7 @@ const TagInput = ({defaultTags}) => {
                         tagIndex={tagIndex}
                         tagValue={tagValue}
                         deleteTag={deleteTag}
+                        highlighted={highlightedTags.includes(tagValue)}
                     />
                 ))}
                 <input
@@ -31,6 +32,11 @@ const TagInput = ({defaultTags}) => {
                     onPaste={onPaste}
                 />
             </div>
+            {highlightedTags.length > 0 && (
+                <p className="tag-input__highlight-message">
+                    The following tags already exist and have been highlighted: {highlightedTags.join(', ')}
+                </p>
+            )}
         </div>
     );
 };

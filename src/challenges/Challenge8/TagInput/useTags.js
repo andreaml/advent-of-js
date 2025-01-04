@@ -1,15 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const useTags = (defaultTags = []) => {
     const [ tags, setTags ] = useState(defaultTags);
     const [ tag, setTag ] = useState('');
+    const [ highlightedTags, setHighlightedTags ] = useState([]);
+
+    const getDuplicatedTags = (tagsToCheck) => {
+        return tags.filter(tagValue => {
+            const duplicatedTags = tagsToCheck.filter(tagToCheck => {
+                return tagValue.toLowerCase().normalize() === tagToCheck.toLowerCase().normalize();
+            });
+            return duplicatedTags.length > 0;
+        });
+    }
+
+    const handleSetTags = (newTags) => {
+        const duplicatedTags = getDuplicatedTags(newTags);
+        if (duplicatedTags.length > 0) {
+            setHighlightedTags(duplicatedTags);
+        } else {
+            setTags([...tags, ...newTags]);
+        }
+    }
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setHighlightedTags([]);
+        }, 5000)
+        
+        return () => clearTimeout(timeout);
+    }, [highlightedTags]);
 
     const onKeyDown = (e) => {
         switch (e.key) {
             case ',':
             case 'Enter':
                 if (tag !== '') {
-                    setTags([...tags, tag]);
+                    handleSetTags([tag]);
                     setTag('');
                 }
                 e.preventDefault();
@@ -28,7 +55,7 @@ const useTags = (defaultTags = []) => {
         const pasteData = e.clipboardData.getData('text');
         if (pasteData.includes(',')) {
             const clipboardTags = pasteData.split(',').map(tag => tag.trim());
-            setTags([...tags, ...clipboardTags]);
+            handleSetTags(clipboardTags);
             e.preventDefault();
         }
     }
@@ -44,6 +71,7 @@ const useTags = (defaultTags = []) => {
     return {
         tags,
         tag,
+        highlightedTags,
         onTagChange,
         onPaste,
         onKeyDown,

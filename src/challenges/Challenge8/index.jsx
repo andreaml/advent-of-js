@@ -14,6 +14,9 @@
     - Paste multiple tags at once
     - Add tags by pressing Enter key
     - Can pass default tags as a prop
+    - Highlight tags that already exist for 5 seconds
+    - Display a message with the highlighted tags
+    - Tags are case insensitive
 */
 
 import React from 'react';

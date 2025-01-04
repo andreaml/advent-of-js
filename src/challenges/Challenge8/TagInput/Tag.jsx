@@ -1,8 +1,8 @@
 import  CloseIcon  from './assets/CloseIcon.svg?react';
 
-const Tag = ({tagIndex, tagValue, deleteTag}) => {
+const Tag = ({tagIndex, tagValue, highlighted, deleteTag}) => {
     return (
-        <div className="tag">
+        <div className={`tag ${highlighted ? 'highlighted' : ''}`}>
             {tagValue}
             <button onClick={() => deleteTag(tagIndex)}><CloseIcon/></button>
         </div>

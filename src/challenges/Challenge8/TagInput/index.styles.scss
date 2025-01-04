@@ -12,6 +12,10 @@
     display: flex;
     justify-content: space-between;
 
+    &.highlighted {
+        border-color: var(--main-accent-color);
+    }
+
     button {
         background-color: transparent;
         border: none;
@@ -75,5 +79,9 @@
         &::placeholder {
             color: var(--main-secondary-light-color);
         }
+    }
+
+    &__highlight-message {
+        color: var(--main-accent-color);
     }
 }
