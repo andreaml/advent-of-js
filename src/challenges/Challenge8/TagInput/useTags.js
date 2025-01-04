@@ -36,7 +36,7 @@ const useTags = (defaultTags = []) => {
             case ',':
             case 'Enter':
                 if (tag !== '') {
-                    handleSetTags([tag]);
+                    handleSetTags([tag.trim()]);
                     setTag('');
                 }
                 e.preventDefault();
