@@ -7,6 +7,7 @@ import Challenge4 from './challenges/Challenge4'
 import Challenge5 from './challenges/Challenge5'
 import Challenge6 from './challenges/Challenge6'
 import Challenge7 from './challenges/Challenge7'
+import Challenge8 from './challenges/Challenge8'
 
 
 function App() {
@@ -37,6 +38,8 @@ function App() {
         <Challenge6/>
         <h2>Challenge 7: Slugify input</h2>
         <Challenge7/>
+        <h2>Challenge 8: Tag Input Editor</h2>
+        <Challenge8/>
       </div>
     </>
   )
